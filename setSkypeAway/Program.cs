@@ -14,6 +14,7 @@ namespace setSkypeDnd
         private static Skype skype;
         static void Main(string[] args)
         {
+            Console.WriteLine("Switch over to skype and accept setSkypeDND :D");
             skype = new Skype();
             skype.Attach();
 

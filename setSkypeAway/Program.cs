@@ -101,7 +101,14 @@ namespace setSkypeDnd
         {
             if (skype.CurrentUserStatus != activeStatus)
             {
-                skype.ChangeUserStatus(activeStatus);
+                try
+                {
+                    skype.ChangeUserStatus(activeStatus);
+                }
+                catch (Exception e)
+                {
+                    //do nothing;
+                }
             }
         }
         protected override void OnLoad(EventArgs e)

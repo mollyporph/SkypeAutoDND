@@ -48,14 +48,14 @@ namespace setSkypeDnd
 
             trayIcon.ContextMenu = trayMenu;
             trayIcon.Visible = true;
-
+            trayIcon.ShowBalloonTip(3000);
             skype = new Skype();
             skype.Attach();
 
             timer = new Timer(2000);
             timer.Elapsed += (sender, eventArgs) => ForceStatus();
             timer.Enabled = true;
-            trayIcon.ShowBalloonTip(3000);
+           
         }
 
         private void OnOnline(object sender, EventArgs e)
